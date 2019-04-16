@@ -10,6 +10,9 @@
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25FAE3C722662C0A003F8214 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3C622662C0A003F8214 /* Kanna.framework */; };
+		25FAE3C922662C71003F8214 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3C822662C71003F8214 /* Nimble.framework */; };
+		25FAE3CB22662C71003F8214 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3CA22662C71003F8214 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		25FAE3B422638133003F8214 /* BookbinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookbinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3B922638133003F8214 /* BookbinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookbinderTests.swift; sourceTree = "<group>"; };
 		25FAE3BB22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25FAE3C622662C0A003F8214 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25FAE3C822662C71003F8214 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25FAE3CA22662C71003F8214 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FAE3C722662C0A003F8214 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25FAE3C922662C71003F8214 /* Nimble.framework in Frameworks */,
+				25FAE3CB22662C71003F8214 /* Quick.framework in Frameworks */,
 				25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,6 +65,7 @@
 				25FAE3AD22638133003F8214 /* Bookbinder */,
 				25FAE3B822638133003F8214 /* BookbinderTests */,
 				25FAE3AC22638133003F8214 /* Products */,
+				25FAE3C522662C0A003F8214 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +94,16 @@
 				25FAE3BB22638133003F8214 /* Info.plist */,
 			);
 			path = BookbinderTests;
+			sourceTree = "<group>";
+		};
+		25FAE3C522662C0A003F8214 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25FAE3C822662C71003F8214 /* Nimble.framework */,
+				25FAE3CA22662C71003F8214 /* Quick.framework */,
+				25FAE3C622662C0A003F8214 /* Kanna.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

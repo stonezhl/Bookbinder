@@ -4,4 +4,13 @@
    <FileRef
       location = "container:Bookbinder.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Kanna/Kanna.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Quick/Quick.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
+   </FileRef>
 </Workspace>
