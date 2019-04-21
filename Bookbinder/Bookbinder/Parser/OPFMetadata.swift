@@ -9,6 +9,7 @@
 import Kanna
 
 struct OPFMetadata {
-    init?(package: XMLElement) {
+    init?(package: XMLElement, namespaces: [String: String]) {
+        guard let metadata = package.at_xpath(XPath.xmlns("metadata").expression, namespaces: namespaces) else { return nil }
     }
 }

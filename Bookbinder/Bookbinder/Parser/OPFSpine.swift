@@ -9,6 +9,7 @@
 import Kanna
 
 struct OPFSpine {
-    init?(package: XMLElement) {
+    init?(package: XMLElement, namespaces: [String: String]) {
+        guard let spine = package.at_xpath(XPath.xmlns("spine").expression, namespaces: namespaces) else { return nil }
     }
 }
