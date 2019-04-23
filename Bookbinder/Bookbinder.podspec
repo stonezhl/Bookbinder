@@ -12,6 +12,9 @@ Pod::Spec.new do |spec|
   spec.source = { git: "https://github.com/stonezhl/Bookbinder.git", tag: "#{spec.version}", submodules: true }
   spec.source_files = "Bookbinder/**/*.{h,swift}"
   spec.requires_arc = true
+  spec.pod_target_xcconfig = {
+    "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2"
+  }
 
-  spec.dependency "Kanna"#, "~> 5.0.0"
+  spec.dependency "Kanna", "~> 5.0.0"
 end
