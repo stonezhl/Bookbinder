@@ -9,16 +9,12 @@
 import Kanna
 
 enum XPath {
-    case ignoreNamespace(String)
-    case xmlns(String)
+    case xmlns
 
-    var expression: String {
+    var namespace: [String: String] {
         switch self {
-        case .ignoreNamespace(let elementName):
-            // https://stackoverflow.com/questions/122463/how-to-retrieve-namespaces-in-xml-files-using-xpath
-            return "*[local-name()='\(elementName)']"
-        case .xmlns(let elementName):
-            return "xmlns:\(elementName)"
+        case .xmlns:
+            return ["xmlns": "http://www.idpf.org/2007/opf"]
         }
     }
 }

@@ -9,7 +9,7 @@
 import Kanna
 
 struct OPFManifest {
-    init?(package: XMLElement, namespaces: [String: String]) {
-        guard let manifest = package.at_xpath(XPath.xmlns("manifest").expression, namespaces: namespaces) else { return nil }
+    init?(package: XMLElement) {
+        guard let manifest = package.at_xpath("xmlns:manifest", namespaces: XPath.xmlns.namespace) else { return nil }
     }
 }

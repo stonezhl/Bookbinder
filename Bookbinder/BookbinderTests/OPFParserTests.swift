@@ -23,10 +23,12 @@ class OPFParserTests: QuickSpec {
                 expect(opfDocument).notTo(beNil())
                 let package = opfDocument?.package
                 expect(package).notTo(beNil())
-                expect(package?.namespaces).to(equal(["xmlns": "http://www.idpf.org/2007/opf"]))
                 expect(package?.uniqueIdentifier).to(equal("uid"))
+                // metadata
                 expect(package?.metadata).notTo(beNil())
+                // manifest
                 expect(package?.manifest).notTo(beNil())
+                // spine
                 expect(package?.spine).notTo(beNil())
             }
         }
