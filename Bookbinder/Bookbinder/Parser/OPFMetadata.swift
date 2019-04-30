@@ -27,6 +27,10 @@ struct OPFMetadata {
     private(set) var sources = [String]()
     private(set) var subjects = [String]()
     // let type
+    // META Elements
+    private(set) var modifiedDate: String?
+    private(set) var coverImageID: String?
+    // LINK Elements
 
     init?(package: XMLElement) {
         guard let metadata = package.at_xpath("xmlns:metadata", namespaces: XPath.xmlns.namespace) else { return nil }
@@ -67,6 +71,15 @@ struct OPFMetadata {
                 break
             default:
                 break
+            }
+        }
+        // META
+        let metas = metadata.xpath("xmlns:meta", namespaces: XPath.xmlns.namespace)
+        for meta in metas {
+            if meta["property"] == "dcterms:modified" {
+                modifiedDate = meta.text
+            } else if meta["name"] == "cover" {
+                coverImageID = meta["content"]
             }
         }
     }
@@ -210,3 +223,27 @@ struct DCIdentifier {
 // http://idpf.github.io/epub-registries/types/#sec-types
 // dc:type
 // text
+
+// MARK: - The META Elements
+// https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-meta-elem
+// text
+// attributes:
+// - opf:alt-rep [optional]
+// - opf:alt-rep-lang [conditionally required]
+// - dir [optional]
+// - opf:file-as [optional]
+// - id [optional]
+// - property [required]
+// - refines [optional] [SUPERSEDED]
+// - scheme [optional]
+// - xml:lang [optional]
+
+// MARK: - The LINK Elements
+// https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-link-elem
+// text
+// attributes:
+// - href [required]
+// - id [optional]
+// - media-type [conditionally required]
+// - properties [optional]
+// - rel [required]

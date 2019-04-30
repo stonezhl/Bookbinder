@@ -59,6 +59,10 @@ class OPFParserTests: QuickSpec {
                 let subjects = metadata?.subjects
                 expect(subjects?.count).to(equal(1))
                 expect(subjects?[0]).to(equal("Fantasy"))
+                let modifiedDate = metadata?.modifiedDate
+                expect(modifiedDate).to(equal("2017-03-09T17:21:15Z"))
+                let coverImageID = metadata?.coverImageID
+                expect(coverImageID).to(equal("cover.jpg"))
                 // manifest
                 expect(package?.manifest).notTo(beNil())
                 // spine
