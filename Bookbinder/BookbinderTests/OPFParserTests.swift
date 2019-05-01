@@ -122,7 +122,33 @@ class OPFParserTests: QuickSpec {
                                 expect(items?[file]?.properties).to(beNil())
                 }
                 // spine
-                expect(package?.spine).notTo(beNil())
+                let spine = package?.spine
+                expect(spine).notTo(beNil())
+                let toc = spine?.toc
+                expect(toc).to(equal("ncx"))
+                let itemrefs = spine?.itemrefs
+                expect(itemrefs?.count).to(equal(18))
+                let expectedIdrefs = ["titlepage.xhtml",
+                                      "imprint.xhtml",
+                                      "epigraph.xhtml",
+                                      "halftitle.xhtml",
+                                      "chapter-1.xhtml",
+                                      "chapter-2.xhtml",
+                                      "chapter-3.xhtml",
+                                      "chapter-4.xhtml",
+                                      "chapter-5.xhtml",
+                                      "chapter-6.xhtml",
+                                      "chapter-7.xhtml",
+                                      "chapter-8.xhtml",
+                                      "chapter-9.xhtml",
+                                      "chapter-10.xhtml",
+                                      "chapter-11.xhtml",
+                                      "chapter-12.xhtml",
+                                      "colophon.xhtml",
+                                      "uncopyright.xhtml"]
+                for (i, itemref) in itemrefs!.enumerated() {
+                    expect(itemref.idref).to(equal(expectedIdrefs[i]))
+                }
             }
         }
     }
