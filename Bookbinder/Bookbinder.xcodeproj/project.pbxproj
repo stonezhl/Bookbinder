@@ -14,6 +14,7 @@
 		251EB72F226C2DCF004E0BCA /* OPFPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EB72A226C2DCF004E0BCA /* OPFPackage.swift */; };
 		251EB731226C3AA3004E0BCA /* OPFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EB730226C3AA3004E0BCA /* OPFDocument.swift */; };
 		251EB733226C3DC4004E0BCA /* OPFParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EB732226C3DC4004E0BCA /* OPFParserTests.swift */; };
+		253075F022793B0D003D72F9 /* NCXs in Resources */ = {isa = PBXBuildFile; fileRef = 253075EF22793B0D003D72F9 /* NCXs */; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,7 @@
 		251EB72A226C2DCF004E0BCA /* OPFPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFPackage.swift; sourceTree = "<group>"; };
 		251EB730226C3AA3004E0BCA /* OPFDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPFDocument.swift; sourceTree = "<group>"; };
 		251EB732226C3DC4004E0BCA /* OPFParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPFParserTests.swift; sourceTree = "<group>"; };
+		253075EF22793B0D003D72F9 /* NCXs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NCXs; sourceTree = "<group>"; };
 		25FAE3AB22638133003F8214 /* Bookbinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bookbinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AE22638133003F8214 /* Bookbinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bookbinder.h; sourceTree = "<group>"; };
 		25FAE3AF22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		25FAE3B822638133003F8214 /* BookbinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				253075EF22793B0D003D72F9 /* NCXs */,
 				251EB708226C280E004E0BCA /* OPFs */,
 				25FAE3B922638133003F8214 /* BookbinderTests.swift */,
 				251EB732226C3DC4004E0BCA /* OPFParserTests.swift */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				253075F022793B0D003D72F9 /* NCXs in Resources */,
 				251EB709226C280E004E0BCA /* OPFs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

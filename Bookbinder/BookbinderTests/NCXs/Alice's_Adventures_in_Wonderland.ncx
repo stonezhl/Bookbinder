@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en-US">
+	<head>
+		<meta content="url:https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland" name="dtb:uid"/>
+	</head>
+	<docTitle>
+		<text>Table of Contents</text>
+	</docTitle>
+	<navMap id="navmap">
+		<navPoint id="idm45240424131952" playOrder="1">
+			<navLabel>
+				<text>Title Page</text>
+			</navLabel>
+			<content src="text/titlepage.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423968592" playOrder="2">
+			<navLabel>
+				<text>Imprint</text>
+			</navLabel>
+			<content src="text/imprint.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423967584" playOrder="3">
+			<navLabel>
+				<text>All in the Golden Afternoon</text>
+			</navLabel>
+			<content src="text/epigraph.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423966576" playOrder="4">
+			<navLabel>
+				<text>I: Down the Rabbit-Hole</text>
+			</navLabel>
+			<content src="text/chapter-1.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423964576" playOrder="5">
+			<navLabel>
+				<text>II: The Pool of Tears</text>
+			</navLabel>
+			<content src="text/chapter-2.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423962576" playOrder="6">
+			<navLabel>
+				<text>III: A Caucus-Race and a Long Tale</text>
+			</navLabel>
+			<content src="text/chapter-3.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423960576" playOrder="7">
+			<navLabel>
+				<text>IV: The Rabbit Sends in a Little Bill</text>
+			</navLabel>
+			<content src="text/chapter-4.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423958576" playOrder="8">
+			<navLabel>
+				<text>V: Advice From a Caterpillar</text>
+			</navLabel>
+			<content src="text/chapter-5.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423956576" playOrder="9">
+			<navLabel>
+				<text>VI: Pig and Pepper</text>
+			</navLabel>
+			<content src="text/chapter-6.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423954576" playOrder="10">
+			<navLabel>
+				<text>VII: A Mad Tea-Party</text>
+			</navLabel>
+			<content src="text/chapter-7.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423952576" playOrder="11">
+			<navLabel>
+				<text>VIII: The Queen’s Croquet-Ground</text>
+			</navLabel>
+			<content src="text/chapter-8.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423950496" playOrder="12">
+			<navLabel>
+				<text>IX: The Mock Turtle’s Story</text>
+			</navLabel>
+			<content src="text/chapter-9.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423948400" playOrder="13">
+			<navLabel>
+				<text>X: The Lobster Quadrille</text>
+			</navLabel>
+			<content src="text/chapter-10.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423946272" playOrder="14">
+			<navLabel>
+				<text>XI: Who Stole the Tarts?</text>
+			</navLabel>
+			<content src="text/chapter-11.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423944096" playOrder="15">
+			<navLabel>
+				<text>XII: Alice’s Evidence</text>
+			</navLabel>
+			<content src="text/chapter-12.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423941952" playOrder="16">
+			<navLabel>
+				<text>Colophon</text>
+			</navLabel>
+			<content src="text/colophon.xhtml"/>
+		</navPoint>
+		<navPoint id="idm45240423940880" playOrder="17">
+			<navLabel>
+				<text>Uncopyright</text>
+			</navLabel>
+			<content src="text/uncopyright.xhtml"/>
+		</navPoint>
+	</navMap>
+</ncx>
