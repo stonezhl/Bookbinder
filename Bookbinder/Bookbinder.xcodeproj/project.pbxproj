@@ -24,6 +24,7 @@
 		2530760622795BCF003D72F9 /* EPUBBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530760522795BCF003D72F9 /* EPUBBook.swift */; };
 		2530760822796D76003D72F9 /* EPUBs in Resources */ = {isa = PBXBuildFile; fileRef = 2530760722796D76003D72F9 /* EPUBs */; };
 		2530760C22796DB3003D72F9 /* EPUBBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530760B22796DB3003D72F9 /* EPUBBookTests.swift */; };
+		2530760E2279BCF5003D72F9 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2530760D2279BCF5003D72F9 /* ZIPFoundation.framework */; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,6 +61,7 @@
 		2530760522795BCF003D72F9 /* EPUBBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBBook.swift; sourceTree = "<group>"; };
 		2530760722796D76003D72F9 /* EPUBs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EPUBs; sourceTree = "<group>"; };
 		2530760B22796DB3003D72F9 /* EPUBBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBBookTests.swift; sourceTree = "<group>"; };
+		2530760D2279BCF5003D72F9 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AB22638133003F8214 /* Bookbinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bookbinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AE22638133003F8214 /* Bookbinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bookbinder.h; sourceTree = "<group>"; };
 		25FAE3AF22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2530760E2279BCF5003D72F9 /* ZIPFoundation.framework in Frameworks */,
 				25FAE3C722662C0A003F8214 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +161,7 @@
 		25FAE3C522662C0A003F8214 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2530760D2279BCF5003D72F9 /* ZIPFoundation.framework */,
 				25FAE3C822662C71003F8214 /* Nimble.framework */,
 				25FAE3CA22662C71003F8214 /* Quick.framework */,
 				25FAE3C622662C0A003F8214 /* Kanna.framework */,

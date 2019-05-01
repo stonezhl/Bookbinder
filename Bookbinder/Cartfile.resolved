@@ -1,3 +1,4 @@
 github "Quick/Nimble" "v8.0.1"
-github "Quick/Quick" "v2.0.0"
+github "Quick/Quick" "v2.1.0"
 github "tid-kijyun/Kanna" "5.0.0"
+github "weichsel/ZIPFoundation" "0.9.9"

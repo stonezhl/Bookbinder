@@ -1,0 +1,12 @@
+[submodule "Carthage/Checkouts/Quick"]
+	path = Bookbinder/Carthage/Checkouts/Quick
+	url = https://github.com/Quick/Quick.git
+[submodule "Carthage/Checkouts/Nimble"]
+	path = Bookbinder/Carthage/Checkouts/Nimble
+	url = https://github.com/Quick/Nimble.git
+[submodule "Carthage/Checkouts/Kanna"]
+	path = Bookbinder/Carthage/Checkouts/Kanna
+	url = https://github.com/tid-kijyun/Kanna.git
+[submodule "Carthage/Checkouts/ZIPFoundation"]
+	path = Bookbinder/Carthage/Checkouts/ZIPFoundation
+	url = https://github.com/weichsel/ZIPFoundation.git
