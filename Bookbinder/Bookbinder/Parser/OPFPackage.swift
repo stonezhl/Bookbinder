@@ -18,7 +18,7 @@ struct OPFPackage {
     // let guide
 
     init?(document: XMLDocument) {
-        guard let package = document.at_xpath("/xmlns:package", namespaces: XPath.xmlns.namespace) else { return nil }
+        guard let package = document.at_xpath("/opf:package", namespaces: XPath.opf.namespace) else { return nil }
         uniqueIdentifier = package["unique-identifier"]
         metadata =  OPFMetadata(package: package)
         manifest = OPFManifest(package: package)

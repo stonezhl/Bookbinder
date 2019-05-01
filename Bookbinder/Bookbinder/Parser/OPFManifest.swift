@@ -13,8 +13,8 @@ struct OPFManifest {
     private(set) var items = [String: ManifestItem]()
 
     init?(package: XMLElement) {
-        guard let manifest = package.at_xpath("xmlns:manifest", namespaces: XPath.xmlns.namespace) else { return nil }
-        let itemElements = manifest.xpath("xmlns:item", namespaces: XPath.xmlns.namespace)
+        guard let manifest = package.at_xpath("opf:manifest", namespaces: XPath.opf.namespace) else { return nil }
+        let itemElements = manifest.xpath("opf:item", namespaces: XPath.opf.namespace)
         for itemElement in itemElements {
             guard let item = ManifestItem(itemElement) else { continue }
             items[item.id] = item

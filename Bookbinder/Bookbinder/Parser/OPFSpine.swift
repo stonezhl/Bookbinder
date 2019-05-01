@@ -16,9 +16,9 @@ struct OPFSpine {
     // toc [optional] [OBSOLETE]
 
     init?(package: XMLElement) {
-        guard let spine = package.at_xpath("xmlns:spine", namespaces: XPath.xmlns.namespace) else { return nil }
+        guard let spine = package.at_xpath("opf:spine", namespaces: XPath.opf.namespace) else { return nil }
         toc = spine["toc"]
-        let itemrefElements = spine.xpath("xmlns:itemref", namespaces: XPath.xmlns.namespace)
+        let itemrefElements = spine.xpath("opf:itemref", namespaces: XPath.opf.namespace)
         for itemrefElement in itemrefElements {
             guard let itemref = SpineItemref(itemrefElement) else { continue }
             itemrefs.append(itemref)

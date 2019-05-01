@@ -33,7 +33,7 @@ struct OPFMetadata {
     // LINK Elements
 
     init?(package: XMLElement) {
-        guard let metadata = package.at_xpath("xmlns:metadata", namespaces: XPath.xmlns.namespace) else { return nil }
+        guard let metadata = package.at_xpath("opf:metadata", namespaces: XPath.opf.namespace) else { return nil }
         // DCMES
         let dcmes = metadata.xpath("dc:*", namespaces: XPath.dc.namespace)
         for dc in dcmes {
@@ -74,7 +74,7 @@ struct OPFMetadata {
             }
         }
         // META
-        let metas = metadata.xpath("xmlns:meta", namespaces: XPath.xmlns.namespace)
+        let metas = metadata.xpath("opf:meta", namespaces: XPath.opf.namespace)
         for meta in metas {
             if meta["property"] == "dcterms:modified" {
                 modifiedDate = meta.text

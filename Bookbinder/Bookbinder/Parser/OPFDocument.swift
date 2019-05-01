@@ -8,20 +8,6 @@
 
 import Kanna
 
-enum XPath {
-    case xmlns
-    case dc
-
-    var namespace: [String: String] {
-        switch self {
-        case .xmlns:
-            return ["xmlns": "http://www.idpf.org/2007/opf"]
-        case .dc:
-            return ["dc": "http://purl.org/dc/elements/1.1/"]
-        }
-    }
-}
-
 struct OPFDocument {
     let package: OPFPackage?
 
