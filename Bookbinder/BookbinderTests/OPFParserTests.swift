@@ -64,7 +64,63 @@ class OPFParserTests: QuickSpec {
                 let coverImageID = metadata?.coverImageID
                 expect(coverImageID).to(equal("cover.jpg"))
                 // manifest
-                expect(package?.manifest).notTo(beNil())
+                let manifest = package?.manifest
+                expect(manifest).notTo(beNil())
+                let items = manifest?.items
+                expect(items?.count).to(equal(25))
+                var id = "ncx"
+                expect(items?[id]?.id).to(equal(id))
+                expect(items?[id]?.href).to(equal("toc.ncx"))
+                expect(items?[id]?.mediaType).to(equal("application/x-dtbncx+xml"))
+                expect(items?[id]?.properties).to(beNil())
+                id = "toc.xhtml"
+                expect(items?[id]?.id).to(equal(id))
+                expect(items?[id]?.href).to(equal("toc.xhtml"))
+                expect(items?[id]?.mediaType).to(equal("application/xhtml+xml"))
+                expect(items?[id]?.properties).to(equal("nav"))
+                id = "core.css"
+                expect(items?[id]?.id).to(equal(id))
+                expect(items?[id]?.href).to(equal("css/core.css"))
+                expect(items?[id]?.mediaType).to(equal("text/css"))
+                expect(items?[id]?.properties).to(beNil())
+                id = "local.css"
+                expect(items?[id]?.id).to(equal(id))
+                expect(items?[id]?.href).to(equal("css/local.css"))
+                expect(items?[id]?.mediaType).to(equal("text/css"))
+                expect(items?[id]?.properties).to(beNil())
+                id = "cover.jpg"
+                expect(items?[id]?.id).to(equal(id))
+                expect(items?[id]?.href).to(equal("images/cover.jpg"))
+                expect(items?[id]?.mediaType).to(equal("image/jpeg"))
+                expect(items?[id]?.properties).to(equal("cover-image"))
+                id = "logo.png"
+                expect(items?[id]?.id).to(equal(id))
+                expect(items?[id]?.href).to(equal("images/logo.png"))
+                expect(items?[id]?.mediaType).to(equal("image/png"))
+                expect(items?[id]?.properties).to(beNil())
+                id = "titlepage.png"
+                expect(items?[id]?.id).to(equal(id))
+                expect(items?[id]?.href).to(equal("images/titlepage.png"))
+                expect(items?[id]?.mediaType).to(equal("image/png"))
+                expect(items?[id]?.properties).to(beNil())
+                for i in 1...12 {
+                    id = "chapter-\(i).xhtml"
+                    expect(items?[id]?.id).to(equal(id))
+                    expect(items?[id]?.href).to(equal("text/chapter-\(i).xhtml"))
+                    expect(items?[id]?.mediaType).to(equal("application/xhtml+xml"))
+                    expect(items?[id]?.properties).to(beNil())
+                }
+                for file in ["colophon.xhtml",
+                             "epigraph.xhtml",
+                             "halftitle.xhtml",
+                             "imprint.xhtml",
+                             "uncopyright.xhtml",
+                             "titlepage.xhtml"] {
+                                expect(items?[file]?.id).to(equal(file))
+                                expect(items?[file]?.href).to(equal("text/\(file)"))
+                                expect(items?[file]?.mediaType).to(equal("application/xhtml+xml"))
+                                expect(items?[file]?.properties).to(beNil())
+                }
                 // spine
                 expect(package?.spine).notTo(beNil())
             }
