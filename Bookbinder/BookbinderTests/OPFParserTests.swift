@@ -146,7 +146,7 @@ class OPFParserTests: QuickSpec {
                                       "chapter-12.xhtml",
                                       "colophon.xhtml",
                                       "uncopyright.xhtml"]
-                for (i, itemref) in itemrefs!.enumerated() {
+                for (i, itemref) in itemrefs?.enumerated() ?? [].enumerated() {
                     expect(itemref.idref).to(equal(expectedIdrefs[i]))
                 }
             }

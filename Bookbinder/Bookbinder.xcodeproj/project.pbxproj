@@ -16,6 +16,9 @@
 		251EB733226C3DC4004E0BCA /* OPFParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EB732226C3DC4004E0BCA /* OPFParserTests.swift */; };
 		253075F022793B0D003D72F9 /* NCXs in Resources */ = {isa = PBXBuildFile; fileRef = 253075EF22793B0D003D72F9 /* NCXs */; };
 		253075F222793C38003D72F9 /* XParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F122793C38003D72F9 /* XParser.swift */; };
+		253075F422793D1F003D72F9 /* NCXDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F322793D1F003D72F9 /* NCXDocument.swift */; };
+		253075F6227940C8003D72F9 /* NCXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F5227940C8003D72F9 /* NCXNode.swift */; };
+		253075F822794337003D72F9 /* NCXParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F722794337003D72F9 /* NCXParserTests.swift */; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +47,9 @@
 		251EB732226C3DC4004E0BCA /* OPFParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPFParserTests.swift; sourceTree = "<group>"; };
 		253075EF22793B0D003D72F9 /* NCXs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NCXs; sourceTree = "<group>"; };
 		253075F122793C38003D72F9 /* XParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XParser.swift; sourceTree = "<group>"; };
+		253075F322793D1F003D72F9 /* NCXDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCXDocument.swift; sourceTree = "<group>"; };
+		253075F5227940C8003D72F9 /* NCXNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCXNode.swift; sourceTree = "<group>"; };
+		253075F722794337003D72F9 /* NCXParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCXParserTests.swift; sourceTree = "<group>"; };
 		25FAE3AB22638133003F8214 /* Bookbinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bookbinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AE22638133003F8214 /* Bookbinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bookbinder.h; sourceTree = "<group>"; };
 		25FAE3AF22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 				251EB727226C2DCF004E0BCA /* OPFMetadata.swift */,
 				251EB728226C2DCF004E0BCA /* OPFManifest.swift */,
 				251EB729226C2DCF004E0BCA /* OPFSpine.swift */,
+				253075F322793D1F003D72F9 /* NCXDocument.swift */,
+				253075F5227940C8003D72F9 /* NCXNode.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 				251EB708226C280E004E0BCA /* OPFs */,
 				25FAE3B922638133003F8214 /* BookbinderTests.swift */,
 				251EB732226C3DC4004E0BCA /* OPFParserTests.swift */,
+				253075F722794337003D72F9 /* NCXParserTests.swift */,
 				25FAE3BB22638133003F8214 /* Info.plist */,
 			);
 			path = BookbinderTests;
@@ -274,11 +283,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				251EB72C226C2DCF004E0BCA /* OPFMetadata.swift in Sources */,
+				253075F6227940C8003D72F9 /* NCXNode.swift in Sources */,
 				251EB731226C3AA3004E0BCA /* OPFDocument.swift in Sources */,
 				251EB72E226C2DCF004E0BCA /* OPFSpine.swift in Sources */,
 				253075F222793C38003D72F9 /* XParser.swift in Sources */,
 				251EB72F226C2DCF004E0BCA /* OPFPackage.swift in Sources */,
 				251EB72D226C2DCF004E0BCA /* OPFManifest.swift in Sources */,
+				253075F422793D1F003D72F9 /* NCXDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				251EB733226C3DC4004E0BCA /* OPFParserTests.swift in Sources */,
+				253075F822794337003D72F9 /* NCXParserTests.swift in Sources */,
 				25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
