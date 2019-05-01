@@ -32,6 +32,11 @@ struct SpineItemref {
     let linear: String?
     // properties [optional]
 
+    var isPrimary: Bool {
+        guard let linear = self.linear else { return true }
+        return linear == "yes"
+    }
+
     init?(_ itemref: XMLElement) {
         guard let itemIdref = itemref["idref"] else { return nil }
         idref = itemIdref

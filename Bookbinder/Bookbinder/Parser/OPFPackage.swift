@@ -10,7 +10,7 @@ import Kanna
 
 // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/
 struct OPFPackage {
-    let uniqueIdentifier: String?
+    let uniqueIdentifierID: String?
     let metadata: OPFMetadata?
     let manifest: OPFManifest?
     let spine: OPFSpine?
@@ -19,7 +19,7 @@ struct OPFPackage {
 
     init?(document: XMLDocument) {
         guard let package = document.at_xpath("/opf:package", namespaces: XPath.opf.namespace) else { return nil }
-        uniqueIdentifier = package["unique-identifier"]
+        uniqueIdentifierID = package["unique-identifier"]
         metadata =  OPFMetadata(package: package)
         manifest = OPFManifest(package: package)
         spine = OPFSpine(package: package)

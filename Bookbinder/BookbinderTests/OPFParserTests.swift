@@ -23,7 +23,7 @@ class OPFParserTests: QuickSpec {
                 expect(opfDocument).notTo(beNil())
                 let package = opfDocument?.package
                 expect(package).notTo(beNil())
-                expect(package?.uniqueIdentifier).to(equal("uid"))
+                expect(package?.uniqueIdentifierID).to(equal("uid"))
                 // metadata
                 let metadata = package?.metadata
                 expect(metadata).notTo(beNil())
