@@ -25,6 +25,9 @@
 		2530760822796D76003D72F9 /* EPUBs in Resources */ = {isa = PBXBuildFile; fileRef = 2530760722796D76003D72F9 /* EPUBs */; };
 		2530760C22796DB3003D72F9 /* EPUBBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530760B22796DB3003D72F9 /* EPUBBookTests.swift */; };
 		2530760E2279BCF5003D72F9 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2530760D2279BCF5003D72F9 /* ZIPFoundation.framework */; };
+		253076102279C023003D72F9 /* BookbinderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2530760F2279C023003D72F9 /* BookbinderConfiguration.swift */; };
+		253076122279C034003D72F9 /* Bookbinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253076112279C034003D72F9 /* Bookbinder.swift */; };
+		253076142279C474003D72F9 /* ZIPs in Resources */ = {isa = PBXBuildFile; fileRef = 253076132279C474003D72F9 /* ZIPs */; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -62,6 +65,9 @@
 		2530760722796D76003D72F9 /* EPUBs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EPUBs; sourceTree = "<group>"; };
 		2530760B22796DB3003D72F9 /* EPUBBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBBookTests.swift; sourceTree = "<group>"; };
 		2530760D2279BCF5003D72F9 /* ZIPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZIPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2530760F2279C023003D72F9 /* BookbinderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookbinderConfiguration.swift; sourceTree = "<group>"; };
+		253076112279C034003D72F9 /* Bookbinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookbinder.swift; sourceTree = "<group>"; };
+		253076132279C474003D72F9 /* ZIPs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ZIPs; sourceTree = "<group>"; };
 		25FAE3AB22638133003F8214 /* Bookbinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bookbinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AE22638133003F8214 /* Bookbinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bookbinder.h; sourceTree = "<group>"; };
 		25FAE3AF22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +142,8 @@
 				251EB705226C238B004E0BCA /* Parser */,
 				25FAE3AE22638133003F8214 /* Bookbinder.h */,
 				2530760522795BCF003D72F9 /* EPUBBook.swift */,
+				2530760F2279C023003D72F9 /* BookbinderConfiguration.swift */,
+				253076112279C034003D72F9 /* Bookbinder.swift */,
 				25FAE3AF22638133003F8214 /* Info.plist */,
 			);
 			path = Bookbinder;
@@ -144,6 +152,7 @@
 		25FAE3B822638133003F8214 /* BookbinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				253076132279C474003D72F9 /* ZIPs */,
 				2530760722796D76003D72F9 /* EPUBs */,
 				251EB708226C280E004E0BCA /* OPFs */,
 				253075EF22793B0D003D72F9 /* NCXs */,
@@ -273,6 +282,7 @@
 				253075FE2279510F003D72F9 /* Containers in Resources */,
 				253075F022793B0D003D72F9 /* NCXs in Resources */,
 				251EB709226C280E004E0BCA /* OPFs in Resources */,
+				253076142279C474003D72F9 /* ZIPs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				251EB72C226C2DCF004E0BCA /* OPFMetadata.swift in Sources */,
+				253076102279C023003D72F9 /* BookbinderConfiguration.swift in Sources */,
+				253076122279C034003D72F9 /* Bookbinder.swift in Sources */,
 				251EB731226C3AA3004E0BCA /* OPFDocument.swift in Sources */,
 				251EB72E226C2DCF004E0BCA /* OPFSpine.swift in Sources */,
 				253075F222793C38003D72F9 /* XParser.swift in Sources */,
