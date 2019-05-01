@@ -21,10 +21,8 @@ class NCXParserTests: QuickSpec {
                 }
                 let ncxDocument = NCXDocument(url: url)
                 expect(ncxDocument).notTo(beNil())
-                let ncx = ncxDocument?.ncx
-                expect(ncx).notTo(beNil())
-                expect(ncx?.title).to(equal("Table of Contents"))
-                let points = ncx?.points
+                expect(ncxDocument?.title).to(equal("Table of Contents"))
+                let points = ncxDocument?.points
                 expect(points?.count).to(equal(17))
                 let expectedLabels = ["Title Page",
                                       "Imprint",

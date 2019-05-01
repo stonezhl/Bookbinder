@@ -17,7 +17,6 @@
 		253075F022793B0D003D72F9 /* NCXs in Resources */ = {isa = PBXBuildFile; fileRef = 253075EF22793B0D003D72F9 /* NCXs */; };
 		253075F222793C38003D72F9 /* XParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F122793C38003D72F9 /* XParser.swift */; };
 		253075F422793D1F003D72F9 /* NCXDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F322793D1F003D72F9 /* NCXDocument.swift */; };
-		253075F6227940C8003D72F9 /* NCXNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F5227940C8003D72F9 /* NCXNode.swift */; };
 		253075F822794337003D72F9 /* NCXParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F722794337003D72F9 /* NCXParserTests.swift */; };
 		253075FA22794D94003D72F9 /* ContainerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253075F922794D94003D72F9 /* ContainerDocument.swift */; };
 		253075FE2279510F003D72F9 /* Containers in Resources */ = {isa = PBXBuildFile; fileRef = 253075FD2279510F003D72F9 /* Containers */; };
@@ -51,7 +50,6 @@
 		253075EF22793B0D003D72F9 /* NCXs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NCXs; sourceTree = "<group>"; };
 		253075F122793C38003D72F9 /* XParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XParser.swift; sourceTree = "<group>"; };
 		253075F322793D1F003D72F9 /* NCXDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCXDocument.swift; sourceTree = "<group>"; };
-		253075F5227940C8003D72F9 /* NCXNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCXNode.swift; sourceTree = "<group>"; };
 		253075F722794337003D72F9 /* NCXParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCXParserTests.swift; sourceTree = "<group>"; };
 		253075F922794D94003D72F9 /* ContainerDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerDocument.swift; sourceTree = "<group>"; };
 		253075FD2279510F003D72F9 /* Containers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Containers; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 				251EB728226C2DCF004E0BCA /* OPFManifest.swift */,
 				251EB729226C2DCF004E0BCA /* OPFSpine.swift */,
 				253075F322793D1F003D72F9 /* NCXDocument.swift */,
-				253075F5227940C8003D72F9 /* NCXNode.swift */,
 				253075F922794D94003D72F9 /* ContainerDocument.swift */,
 			);
 			path = Parser;
@@ -293,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				251EB72C226C2DCF004E0BCA /* OPFMetadata.swift in Sources */,
-				253075F6227940C8003D72F9 /* NCXNode.swift in Sources */,
 				251EB731226C3AA3004E0BCA /* OPFDocument.swift in Sources */,
 				251EB72E226C2DCF004E0BCA /* OPFSpine.swift in Sources */,
 				253075F222793C38003D72F9 /* XParser.swift in Sources */,
