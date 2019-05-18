@@ -11,13 +11,13 @@ import Foundation
 public class EPUBBook {
     public let identifier: String
     public let baseURL: URL
-    let resourceBaseURL: URL
-    let opf: OPFDocument
+    public let resourceBaseURL: URL
+    public let opf: OPFDocument
 
     // accessor
 
     // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-metadata-elem-identifiers-uid
-    lazy var uniqueID: String? = {
+    public lazy var uniqueID: String? = {
         guard let identifiers = opf.package?.metadata?.identifiers, let uniqueIdentifierID = opf.package?.uniqueIdentifierID else { return nil }
         for identifier in identifiers where identifier.id == uniqueIdentifierID {
             return identifier.text
@@ -26,7 +26,7 @@ public class EPUBBook {
     }()
 
     // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-metadata-elem-identifiers-pid
-    lazy var releaseID: String? = {
+    public lazy var releaseID: String? = {
         guard let id = uniqueID else { return nil }
         guard let date = opf.package?.metadata?.modifiedDate else {
             return id
@@ -34,13 +34,13 @@ public class EPUBBook {
         return id + "@" + date
     }()
 
-    lazy var publicationDate: Date? = {
+    public lazy var publicationDate: Date? = {
         guard let date = opf.package?.metadata?.date else { return nil }
         return ISO8601DateFormatter().date(from: date)
     }()
 
     // http://idpf.org/forum/topic-715
-    lazy var coverImageURLs: [URL] = {
+    public lazy var coverImageURLs: [URL] = {
         var urls = [URL]()
         guard let manifest = opf.package?.manifest else { return urls }
         for item in manifest.items.values where item.properties == "cover-image" {
@@ -53,7 +53,7 @@ public class EPUBBook {
         return urls
     }()
 
-    lazy var tocURL: URL? = {
+    public lazy var tocURL: URL? = {
         guard let manifest = opf.package?.manifest else { return nil }
         for item in manifest.items.values where item.properties == "nav" {
             return resourceBaseURL.appendingPathComponent(item.href)
@@ -61,13 +61,13 @@ public class EPUBBook {
         return nil
     }()
 
-    lazy var ncx: NCXDocument? = {
+    public lazy var ncx: NCXDocument? = {
         guard let ncxID = opf.package?.spine?.toc, let path = opf.package?.manifest?.items[ncxID]?.href else { return nil }
         let url = resourceBaseURL.appendingPathComponent(path)
         return NCXDocument(url: url)
     }()
 
-    lazy var pages: [URL]? = {
+    public lazy var pages: [URL]? = {
         return opf.package?.spine?.itemrefs
             .filter { $0.isPrimary }
             .compactMap {
@@ -76,7 +76,7 @@ public class EPUBBook {
         }
     }()
 
-    init?(identifier: String? = nil, contentsOf baseURL: URL) {
+    public init?(identifier: String? = nil, contentsOf baseURL: URL) {
         self.identifier = identifier ?? UUID().uuidString
         self.baseURL = baseURL
         // parse container file

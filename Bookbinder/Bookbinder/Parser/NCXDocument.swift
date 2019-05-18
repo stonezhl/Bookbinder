@@ -9,7 +9,7 @@
 import Kanna
 
 // http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1
-struct NCXDocument {
+public struct NCXDocument {
     let title: String?
     private(set) var points = [NavPoint]()
 

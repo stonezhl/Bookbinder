@@ -8,7 +8,7 @@
 
 import Quick
 import Nimble
-@testable import Bookbinder
+import Bookbinder
 
 class EPUBBookTests: QuickSpec {
     override func spec() {
