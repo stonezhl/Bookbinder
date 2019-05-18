@@ -8,9 +8,9 @@
 
 import Foundation
 
-class EPUBBook {
-    let identifier: String
-    let baseURL: URL
+public class EPUBBook {
+    public let identifier: String
+    public let baseURL: URL
     let resourceBaseURL: URL
     let opf: OPFDocument
 

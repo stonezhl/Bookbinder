@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct BookbinderConfiguration {
-    let rootURL: URL
+public struct BookbinderConfiguration {
+    public let rootURL: URL
 
-    init(rootURL: URL? = nil) {
+    public init(rootURL: URL? = nil) {
         self.rootURL = rootURL ?? URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
     }
 }

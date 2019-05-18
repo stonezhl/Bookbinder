@@ -9,14 +9,14 @@
 import Foundation
 import ZIPFoundation
 
-class Bookbinder {
-    private let configuration: BookbinderConfiguration
+public class Bookbinder {
+    public let configuration: BookbinderConfiguration
 
-    init(configuration: BookbinderConfiguration? = nil) {
+    public init(configuration: BookbinderConfiguration? = nil) {
         self.configuration = configuration ?? BookbinderConfiguration()
     }
 
-    func bindBook(at sourceURL: URL, identifier: String? = nil) -> EPUBBook? {
+    public func bindBook(at sourceURL: URL, identifier: String? = nil) -> EPUBBook? {
         let identifier = identifier ?? sourceURL.deletingPathExtension().lastPathComponent
         let baseURL = configuration.rootURL.appendingPathComponent(identifier)
         let fileManager = FileManager()

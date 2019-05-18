@@ -8,7 +8,7 @@
 
 import Quick
 import Nimble
-@testable import Bookbinder
+import Bookbinder
 
 class BookbinderTests: QuickSpec {
     override func spec() {
@@ -20,10 +20,11 @@ class BookbinderTests: QuickSpec {
                     return
                 }
                 let bookbinder = Bookbinder()
+                let tmpDirURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+                expect(bookbinder.configuration.rootURL).to(equal(tmpDirURL))
                 let ebook = bookbinder.bindBook(at: url)
                 expect(ebook).notTo(beNil())
                 expect(ebook?.identifier).to(equal("Alice's_Adventures_in_Wonderland"))
-                let tmpDirURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
                 let expectedURL = tmpDirURL.appendingPathComponent("Alice's_Adventures_in_Wonderland")
                 expect(ebook?.baseURL).to(equal(expectedURL))
             }
