@@ -9,11 +9,11 @@
 import Kanna
 
 // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/
-struct OPFPackage {
-    let uniqueIdentifierID: String?
-    let metadata: OPFMetadata?
-    let manifest: OPFManifest?
-    let spine: OPFSpine?
+public struct OPFPackage {
+    public let uniqueIdentifierID: String?
+    public let metadata: OPFMetadata?
+    public let manifest: OPFManifest?
+    public let spine: OPFSpine?
     // http://www.idpf.org/epub/301/spec/epub-publications.html#sec-guide-elem
     // let guide
 

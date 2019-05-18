@@ -9,8 +9,8 @@
 import Kanna
 
 // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-manifest-elem
-struct OPFManifest {
-    private(set) var items = [String: ManifestItem]()
+public struct OPFManifest {
+    public private(set) var items = [String: ManifestItem]()
 
     init?(package: XMLElement) {
         guard let manifest = package.at_xpath("opf:manifest", namespaces: XPath.opf.namespace) else { return nil }
@@ -23,13 +23,13 @@ struct OPFManifest {
 }
 
 // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#elemdef-package-item
-struct ManifestItem {
-    let id: String
-    let href: String
+public struct ManifestItem {
+    public let id: String
+    public let href: String
     // https://idpf.github.io/epub-cmt/v3/
-    let mediaType: String
+    public let mediaType: String
     // https://idpf.github.io/epub-vocabs/package/item/#sec-item-property-values
-    let properties: String?
+    public let properties: String?
     // duration [conditionally required]
     // fallback [conditionally required]
     // media-overlay [optional]

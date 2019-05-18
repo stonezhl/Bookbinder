@@ -10,8 +10,8 @@ import Kanna
 
 // http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.4.1
 public struct NCXDocument {
-    let title: String?
-    private(set) var points = [NavPoint]()
+    public let title: String?
+    public private(set) var points = [NavPoint]()
 
     private let document: XMLDocument
 
@@ -32,11 +32,11 @@ public struct NCXDocument {
     }
 }
 
-struct NavPoint {
-    let order: Int
-    let label: String
-    let src: String
-    private(set) var subPoints = [NavPoint]()
+public struct NavPoint {
+    public let order: Int
+    public let label: String
+    public let src: String
+    public private(set) var subPoints = [NavPoint]()
 
     init?(_ navPoint: XMLElement) {
         guard let playOrder = navPoint["playOrder"], let PointOrder = Int(playOrder) else { return nil }

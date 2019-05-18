@@ -9,7 +9,7 @@
 import Kanna
 
 public struct OPFDocument {
-    let package: OPFPackage?
+    public let package: OPFPackage?
 
     private let document: XMLDocument
 

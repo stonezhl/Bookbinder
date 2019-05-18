@@ -9,9 +9,9 @@
 import Kanna
 
 // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-spine-elem
-struct OPFSpine {
-    let toc: String?
-    private(set) var itemrefs = [SpineItemref]()
+public struct OPFSpine {
+    public let toc: String?
+    public private(set) var itemrefs = [SpineItemref]()
     // page-progression-direction [optional]
     // toc [optional] [OBSOLETE]
 
@@ -27,12 +27,12 @@ struct OPFSpine {
 }
 
 // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-itemref-elem
-struct SpineItemref {
-    let idref: String
-    let linear: String?
+public struct SpineItemref {
+    public let idref: String
+    public let linear: String?
     // properties [optional]
 
-    var isPrimary: Bool {
+    public var isPrimary: Bool {
         guard let linear = self.linear else { return true }
         return linear == "yes"
     }

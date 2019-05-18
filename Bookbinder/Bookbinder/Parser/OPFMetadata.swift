@@ -9,27 +9,27 @@
 import Kanna
 
 // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-metadata-elem
-struct OPFMetadata {
+public struct OPFMetadata {
     // DCMES Required Elements
-    private(set) var identifiers = [DCIdentifier]()
-    private(set) var titles = [String]()
-    private(set) var languages = [String]()
+    public private(set) var identifiers = [DCIdentifier]()
+    public private(set) var titles = [String]()
+    public private(set) var languages = [String]()
     // DCMES Optional Elements
-    private(set) var contributors = [String]()
+    public private(set) var contributors = [String]()
     // let coverage
-    private(set) var creators = [String]()
-    private(set) var date: String?
-    private(set) var description: String?
+    public private(set) var creators = [String]()
+    public private(set) var date: String?
+    public private(set) var description: String?
     // let format
-    private(set) var publisher: String?
+    public private(set) var publisher: String?
     // let relation
-    private(set) var rights: String?
-    private(set) var sources = [String]()
-    private(set) var subjects = [String]()
+    public private(set) var rights: String?
+    public private(set) var sources = [String]()
+    public private(set) var subjects = [String]()
     // let type
     // META Elements
-    private(set) var modifiedDate: String?
-    private(set) var coverImageID: String?
+    public private(set) var modifiedDate: String?
+    public private(set) var coverImageID: String?
     // LINK Elements
 
     init?(package: XMLElement) {
@@ -106,9 +106,9 @@ struct OPFMetadata {
 // attributes:
 // - id [optional]
 // - opf:scheme [optional]
-struct DCIdentifier {
-    let text: String
-    let id: String?
+public struct DCIdentifier {
+    public let text: String
+    public let id: String?
 
     init(_ dc: XMLElement) {
         text = dc.text ?? ""
