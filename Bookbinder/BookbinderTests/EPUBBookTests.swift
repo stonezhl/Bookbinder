@@ -32,8 +32,6 @@ class EPUBBookTests: QuickSpec {
                 expect(ebook?.coverImageURLs).to(equal([coverImageURL, coverImageURL]))
                 expect(ebook?.tocURL).to(equal(ebook?.resourceBaseURL.appendingPathComponent("toc.xhtml")))
                 expect(ebook?.ncx).notTo(beNil())
-                let pages = ebook?.pages
-                expect(pages?.count).to(equal(18))
                 let expectedPagePaths = ["text/titlepage.xhtml",
                                          "text/imprint.xhtml",
                                          "text/epigraph.xhtml",
@@ -52,9 +50,7 @@ class EPUBBookTests: QuickSpec {
                                          "text/chapter-12.xhtml",
                                          "text/colophon.xhtml",
                                          "text/uncopyright.xhtml"]
-                for (i, page) in pages?.enumerated() ?? [].enumerated() {
-                    expect(page).to(equal(ebook?.resourceBaseURL.appendingPathComponent(expectedPagePaths[i])))
-                }
+                expect(ebook?.pages).to(equal(expectedPagePaths.map { ebook?.resourceBaseURL.appendingPathComponent($0) }))
             }
         }
     }

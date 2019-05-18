@@ -124,10 +124,7 @@ class OPFParserTests: QuickSpec {
                 // spine
                 let spine = package?.spine
                 expect(spine).notTo(beNil())
-                let toc = spine?.toc
-                expect(toc).to(equal("ncx"))
-                let itemrefs = spine?.itemrefs
-                expect(itemrefs?.count).to(equal(18))
+                expect(spine?.toc).to(equal("ncx"))
                 let expectedIdrefs = ["titlepage.xhtml",
                                       "imprint.xhtml",
                                       "epigraph.xhtml",
@@ -146,9 +143,7 @@ class OPFParserTests: QuickSpec {
                                       "chapter-12.xhtml",
                                       "colophon.xhtml",
                                       "uncopyright.xhtml"]
-                for (i, itemref) in itemrefs?.enumerated() ?? [].enumerated() {
-                    expect(itemref.idref).to(equal(expectedIdrefs[i]))
-                }
+                expect(spine?.itemrefs.map { $0.idref }).to(equal(expectedIdrefs))
             }
         }
     }
