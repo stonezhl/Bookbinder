@@ -28,7 +28,8 @@ class EPUBBookTests: QuickSpec {
                 expect(ebook?.uniqueID).to(equal("url:https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland"))
                 expect(ebook?.releaseID).to(equal("\(ebook?.uniqueID ?? "")@2017-03-09T17:21:15Z"))
                 expect(ebook?.publicationDate).to(equal(ISO8601DateFormatter().date(from: "2015-05-12T00:01:00Z")))
-                expect(ebook?.coverImageURL).to(equal(ebook?.resourceBaseURL.appendingPathComponent("images/cover.jpg")))
+                let coverImageURL = ebook?.resourceBaseURL.appendingPathComponent("images/cover.jpg")
+                expect(ebook?.coverImageURLs).to(equal([coverImageURL, coverImageURL]))
                 expect(ebook?.tocURL).to(equal(ebook?.resourceBaseURL.appendingPathComponent("toc.xhtml")))
                 expect(ebook?.ncx).notTo(beNil())
                 let pages = ebook?.pages

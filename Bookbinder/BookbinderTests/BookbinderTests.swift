@@ -23,7 +23,8 @@ class BookbinderTests: QuickSpec {
                 let ebook = bookbinder.bindBook(at: url)
                 expect(ebook).notTo(beNil())
                 expect(ebook?.identifier).to(equal("Alice's_Adventures_in_Wonderland"))
-                let expectedURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent("Alice's_Adventures_in_Wonderland")
+                let tmpDirURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
+                let expectedURL = tmpDirURL.appendingPathComponent("Alice's_Adventures_in_Wonderland")
                 expect(ebook?.baseURL).to(equal(expectedURL))
             }
         }

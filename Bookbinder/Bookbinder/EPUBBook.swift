@@ -40,20 +40,17 @@ class EPUBBook {
     }()
 
     // http://idpf.org/forum/topic-715
-    lazy var coverImageURL: URL? = {
-        guard let manifest = opf.package?.manifest else { return nil }
+    lazy var coverImageURLs: [URL] = {
+        var urls = [URL]()
+        guard let manifest = opf.package?.manifest else { return urls }
         for item in manifest.items.values where item.properties == "cover-image" {
             let url = resourceBaseURL.appendingPathComponent(item.href)
-            if UIImage(contentsOfFile: url.path) != nil {
-                return url
-            }
+            urls.append(url)
         }
-        guard let imageID = opf.package?.metadata?.coverImageID, let path = manifest.items[imageID]?.href else { return nil }
+        guard let imageID = opf.package?.metadata?.coverImageID, let path = manifest.items[imageID]?.href else { return urls }
         let url = resourceBaseURL.appendingPathComponent(path)
-        if UIImage(contentsOfFile: url.path) != nil {
-            return url
-        }
-        return nil
+        urls.append(url)
+        return urls
     }()
 
     lazy var tocURL: URL? = {
