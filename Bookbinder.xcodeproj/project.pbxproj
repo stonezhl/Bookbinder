@@ -26,6 +26,9 @@
 		25728EC72291F65F00DAC525 /* ContainerDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EC62291F65F00DAC525 /* ContainerDocument.swift */; };
 		25728EC92291F6AB00DAC525 /* Containers in Resources */ = {isa = PBXBuildFile; fileRef = 25728EC82291F6AB00DAC525 /* Containers */; };
 		25728ECB2291F6C300DAC525 /* ContainerParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728ECA2291F6C300DAC525 /* ContainerParserTests.swift */; };
+		25728ECD2291F71100DAC525 /* EPUBBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728ECC2291F71100DAC525 /* EPUBBook.swift */; };
+		25728ECF2291F72D00DAC525 /* EPUBs in Resources */ = {isa = PBXBuildFile; fileRef = 25728ECE2291F72D00DAC525 /* EPUBs */; };
+		25728ED12291F74800DAC525 /* EPUBBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728ED02291F74800DAC525 /* EPUBBookTests.swift */; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +76,9 @@
 		25728EC62291F65F00DAC525 /* ContainerDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerDocument.swift; sourceTree = "<group>"; };
 		25728EC82291F6AB00DAC525 /* Containers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Containers; sourceTree = "<group>"; };
 		25728ECA2291F6C300DAC525 /* ContainerParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerParserTests.swift; sourceTree = "<group>"; };
+		25728ECC2291F71100DAC525 /* EPUBBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPUBBook.swift; sourceTree = "<group>"; };
+		25728ECE2291F72D00DAC525 /* EPUBs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EPUBs; sourceTree = "<group>"; };
+		25728ED02291F74800DAC525 /* EPUBBookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPUBBookTests.swift; sourceTree = "<group>"; };
 		25FAE3AB22638133003F8214 /* Bookbinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bookbinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AE22638133003F8214 /* Bookbinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bookbinder.h; sourceTree = "<group>"; };
 		25FAE3AF22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 			children = (
 				25728EBA2291F3FD00DAC525 /* Parser */,
 				25FAE3AE22638133003F8214 /* Bookbinder.h */,
+				25728ECC2291F71100DAC525 /* EPUBBook.swift */,
 				25FAE3AF22638133003F8214 /* Info.plist */,
 			);
 			path = Bookbinder;
@@ -168,10 +175,12 @@
 		25FAE3B822638133003F8214 /* BookbinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				25728ECE2291F72D00DAC525 /* EPUBs */,
 				25728EC82291F6AB00DAC525 /* Containers */,
 				25728EBC2291F47000DAC525 /* OPFs */,
 				25728EC22291F5A300DAC525 /* NCXs */,
 				25FAE3B922638133003F8214 /* BookbinderTests.swift */,
+				25728ED02291F74800DAC525 /* EPUBBookTests.swift */,
 				25728ECA2291F6C300DAC525 /* ContainerParserTests.swift */,
 				25728EBE2291F48600DAC525 /* OPFParserTests.swift */,
 				25728EC42291F5FD00DAC525 /* NCXParserTests.swift */,
@@ -282,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25728ECF2291F72D00DAC525 /* EPUBs in Resources */,
 				25728EC92291F6AB00DAC525 /* Containers in Resources */,
 				25728EC32291F5A300DAC525 /* NCXs in Resources */,
 				25728EBD2291F47000DAC525 /* OPFs in Resources */,
@@ -337,6 +347,7 @@
 				25728EB72291F3F000DAC525 /* OPFManifest.swift in Sources */,
 				25728EB82291F3F000DAC525 /* OPFMetadata.swift in Sources */,
 				25728EB52291F3F000DAC525 /* OPFDocument.swift in Sources */,
+				25728ECD2291F71100DAC525 /* EPUBBook.swift in Sources */,
 				25728EB42291F3F000DAC525 /* XParser.swift in Sources */,
 				25728EC72291F65F00DAC525 /* ContainerDocument.swift in Sources */,
 				25728EB62291F3F000DAC525 /* OPFPackage.swift in Sources */,
@@ -351,6 +362,7 @@
 			files = (
 				25728ECB2291F6C300DAC525 /* ContainerParserTests.swift in Sources */,
 				25728EBF2291F48600DAC525 /* OPFParserTests.swift in Sources */,
+				25728ED12291F74800DAC525 /* EPUBBookTests.swift in Sources */,
 				25728EC52291F5FD00DAC525 /* NCXParserTests.swift in Sources */,
 				25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */,
 			);
