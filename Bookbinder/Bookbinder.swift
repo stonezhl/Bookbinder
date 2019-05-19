@@ -9,7 +9,7 @@
 import Foundation
 import ZIPFoundation
 
-public class Bookbinder {
+open class Bookbinder {
     public let configuration: BookbinderConfiguration
 
     public init(configuration: BookbinderConfiguration? = nil) {
