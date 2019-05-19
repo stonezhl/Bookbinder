@@ -20,6 +20,9 @@
 		25728EB92291F3F000DAC525 /* OPFSpine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EB32291F3F000DAC525 /* OPFSpine.swift */; };
 		25728EBD2291F47000DAC525 /* OPFs in Resources */ = {isa = PBXBuildFile; fileRef = 25728EBC2291F47000DAC525 /* OPFs */; };
 		25728EBF2291F48600DAC525 /* OPFParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EBE2291F48600DAC525 /* OPFParserTests.swift */; };
+		25728EC12291F57200DAC525 /* NCXDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EC02291F57200DAC525 /* NCXDocument.swift */; };
+		25728EC32291F5A300DAC525 /* NCXs in Resources */ = {isa = PBXBuildFile; fileRef = 25728EC22291F5A300DAC525 /* NCXs */; };
+		25728EC52291F5FD00DAC525 /* NCXParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EC42291F5FD00DAC525 /* NCXParserTests.swift */; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,6 +64,9 @@
 		25728EB32291F3F000DAC525 /* OPFSpine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFSpine.swift; sourceTree = "<group>"; };
 		25728EBC2291F47000DAC525 /* OPFs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OPFs; sourceTree = "<group>"; };
 		25728EBE2291F48600DAC525 /* OPFParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFParserTests.swift; sourceTree = "<group>"; };
+		25728EC02291F57200DAC525 /* NCXDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCXDocument.swift; sourceTree = "<group>"; };
+		25728EC22291F5A300DAC525 /* NCXs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NCXs; sourceTree = "<group>"; };
+		25728EC42291F5FD00DAC525 /* NCXParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NCXParserTests.swift; sourceTree = "<group>"; };
 		25FAE3AB22638133003F8214 /* Bookbinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bookbinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AE22638133003F8214 /* Bookbinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bookbinder.h; sourceTree = "<group>"; };
 		25FAE3AF22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			children = (
 				25728EAE2291F3F000DAC525 /* XParser.swift */,
 				25728EBB2291F42800DAC525 /* OPF */,
+				25728EC02291F57200DAC525 /* NCXDocument.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -155,8 +162,10 @@
 			isa = PBXGroup;
 			children = (
 				25728EBC2291F47000DAC525 /* OPFs */,
+				25728EC22291F5A300DAC525 /* NCXs */,
 				25FAE3B922638133003F8214 /* BookbinderTests.swift */,
 				25728EBE2291F48600DAC525 /* OPFParserTests.swift */,
+				25728EC42291F5FD00DAC525 /* NCXParserTests.swift */,
 				25FAE3BB22638133003F8214 /* Info.plist */,
 			);
 			path = BookbinderTests;
@@ -264,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25728EC32291F5A300DAC525 /* NCXs in Resources */,
 				25728EBD2291F47000DAC525 /* OPFs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +330,7 @@
 				25728EB42291F3F000DAC525 /* XParser.swift in Sources */,
 				25728EB62291F3F000DAC525 /* OPFPackage.swift in Sources */,
 				25728EB92291F3F000DAC525 /* OPFSpine.swift in Sources */,
+				25728EC12291F57200DAC525 /* NCXDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25728EBF2291F48600DAC525 /* OPFParserTests.swift in Sources */,
+				25728EC52291F5FD00DAC525 /* NCXParserTests.swift in Sources */,
 				25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
