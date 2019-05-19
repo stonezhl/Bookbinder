@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" dir="ltr" prefix="se: http://standardebooks.org/vocab/1.0" unique-identifier="uid" version="3.0" xml:lang="en-US">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<meta content="cover.jpg" name="cover"/>
+		<dc:identifier id="uid">url:https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland</dc:identifier>
+		<dc:date>2015-05-12T00:01:00Z</dc:date>
+		<meta property="dcterms:modified">2017-03-09T17:21:15Z</meta>
+		<meta property="se:revision-number">34</meta>
+		<dc:rights>The source text and artwork in this ebook edition are believed to be in the U.S. public domain. This ebook edition is released under the terms in the CC0 1.0 Universal Public Domain Dedication, available at https://creativecommons.org/publicdomain/zero/1.0/. For full license information see the Uncopyright file included at the end of this ebook.</dc:rights>
+		<meta property="se:transform">compatibility</meta>
+		<dc:publisher id="publisher">Standard Ebooks</dc:publisher>
+		<meta property="file-as" refines="#publisher">Standard Ebooks</meta>
+		<meta property="se:url.homepage" refines="#publisher">https://standardebooks.org</meta>
+		<meta property="role" refines="#publisher" scheme="marc:relators">bkd</meta>
+		<meta property="role" refines="#publisher" scheme="marc:relators">mdc</meta>
+		<meta property="role" refines="#publisher" scheme="marc:relators">pbl</meta>
+		<dc:contributor id="type-designer">The League of Moveable Type</dc:contributor>
+		<meta property="file-as" refines="#type-designer">League of Moveable Type, The</meta>
+		<meta property="se:url.homepage" refines="#type-designer">https://www.theleagueofmoveabletype.com</meta>
+		<meta property="role" refines="#type-designer" scheme="marc:relators">tyd</meta>
+		<link href="onix.xml" rel="onix-record"/>
+		<dc:title id="title">Alice's Adventures in Wonderland</dc:title>
+		<meta property="file-as" refines="#title">Alice's Adventures in Wonderland</meta>
+		<dc:subject id="subject-1">Fantasy</dc:subject>
+		<meta property="meta-auth" refines="#subject-1">http://lccn.loc.gov/86015315</meta>
+		<meta property="se:subject">Childrens</meta>
+		<meta property="se:subject">Fiction</meta>
+		<dc:description id="description">A young girl follows a white rabbit into a strange land of poetry, humor, and whimsy.</dc:description>
+		<meta property="meta-auth" refines="#description">https://standardebooks.org</meta>
+		<meta id="long-description" property="se:long-description" refines="#description">
+			&lt;p&gt;Everyone’s familiar with Lewis Carroll’s famous children’s classic and the huge influence it’s had on modern culture.  The Mad Hatter, the Duchess, the Cheshire Cat, the White Rabbit, the Caterpillar—all of these strange and familiar creatures appear in &lt;i&gt;Alice&lt;/i&gt;, and the nonsensical style, memorable poems, and colorful set pieces are just as influential.&lt;/p&gt;
+			&lt;p&gt;The book was originally written as gift to Alice Liddel, the daughter of one of Carroll’s friends. Carroll had told the story to Alice during a rainy-day boat trip up a river.  It stuck in his mind, and a few years later the completed manuscript was published in 1865.  More than 150 years later, it’s just as popular as it ever was.&lt;/p&gt;
+		</meta>
+		<meta property="meta-auth" refines="#long-description">https://standardebooks.org</meta>
+		<dc:language>en-GB</dc:language>
+		<dc:source>https://www.gutenberg.org/ebooks/11</dc:source>
+		<dc:source>https://archive.org/stream/adventuresalices00carrrich</dc:source>
+		<meta property="se:word-count">27382</meta>
+		<meta property="se:reading-ease.flesch">78.89</meta>
+		<meta property="se:url.encyclopedia.wikipedia">https://en.wikipedia.org/wiki/Alice%27s_Adventures_in_Wonderland</meta>
+		<meta property="se:url.vcs.github">https://github.com/standardebooks/lewis-carroll_alices-adventures-in-wonderland</meta>
+		<dc:creator id="author">Lewis Carroll</dc:creator>
+		<meta property="file-as" refines="#author">Carroll, Lewis</meta>
+		<meta property="se:name.person.full-name" refines="#author">Charles Lutwidge Dodgson</meta>
+		<meta property="se:url.encyclopedia.wikipedia" refines="#author">https://en.wikipedia.org/wiki/Lewis_Carroll</meta>
+		<meta property="se:url.authority.nacoaf" refines="#author">http://id.loc.gov/authorities/names/n79056546</meta>
+		<meta property="role" refines="#author" scheme="marc:relators">aut</meta>
+		<dc:contributor id="artist">Ivan Ivanovich Shishkin</dc:contributor>
+		<meta property="file-as" refines="#artist">Shishkin, Ivan Ivanovich</meta>
+		<meta property="alternate-script" refines="#artist" xml:lang="ru">Ива́н Ива́нович Ши́шкин</meta>
+		<meta property="se:url.encyclopedia.wikipedia" refines="#artist">https://en.wikipedia.org/wiki/Ivan_Shishkin</meta>
+		<meta property="se:url.authority.nacoaf" refines="#artist">http://id.loc.gov/authorities/names/n82119235</meta>
+		<meta property="role" refines="#artist" scheme="marc:relators">art</meta>
+		<dc:contributor id="transcriber-1">Arthur DiBianca</dc:contributor>
+		<meta property="file-as" refines="#transcriber-1">DiBianca, Arthur</meta>
+		<meta property="role" refines="#transcriber-1" scheme="marc:relators">trc</meta>
+		<dc:contributor id="transcriber-2">David Widger</dc:contributor>
+		<meta property="file-as" refines="#transcriber-2">Widger, David</meta>
+		<meta property="role" refines="#transcriber-2" scheme="marc:relators">trc</meta>
+		<dc:contributor id="producer-1">Alex Cabal</dc:contributor>
+		<meta property="file-as" refines="#producer-1">Cabal, Alex</meta>
+		<meta property="se:url.homepage" refines="#producer-1">https://alexcabal.com</meta>
+		<meta property="role" refines="#producer-1" scheme="marc:relators">bkp</meta>
+		<meta property="role" refines="#producer-1" scheme="marc:relators">blw</meta>
+		<meta property="role" refines="#producer-1" scheme="marc:relators">cov</meta>
+		<meta property="role" refines="#producer-1" scheme="marc:relators">mrk</meta>
+		<meta property="role" refines="#producer-1" scheme="marc:relators">pfr</meta>
+		<meta property="role" refines="#producer-1" scheme="marc:relators">tyg</meta>
+	</metadata>
+	<manifest>
+		<item href="toc.ncx" id="ncx" media-type="application/x-dtbncx+xml"/>
+		<item href="toc.xhtml" id="toc.xhtml" media-type="application/xhtml+xml" properties="nav"/>
+		<item href="css/core.css" id="core.css" media-type="text/css"/>
+		<item href="css/local.css" id="local.css" media-type="text/css"/>
+		<item href="images/cover.jpg" id="cover.jpg" media-type="image/jpeg" properties="cover-image"/>
+		<item href="images/logo.png" id="logo.png" media-type="image/png"/>
+		<item href="images/titlepage.png" id="titlepage.png" media-type="image/png"/>
+		<item href="text/chapter-1.xhtml" id="chapter-1.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-10.xhtml" id="chapter-10.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-11.xhtml" id="chapter-11.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-12.xhtml" id="chapter-12.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-2.xhtml" id="chapter-2.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-3.xhtml" id="chapter-3.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-4.xhtml" id="chapter-4.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-5.xhtml" id="chapter-5.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-6.xhtml" id="chapter-6.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-7.xhtml" id="chapter-7.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-8.xhtml" id="chapter-8.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/chapter-9.xhtml" id="chapter-9.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/colophon.xhtml" id="colophon.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/epigraph.xhtml" id="epigraph.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/halftitle.xhtml" id="halftitle.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/imprint.xhtml" id="imprint.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/uncopyright.xhtml" id="uncopyright.xhtml" media-type="application/xhtml+xml"/>
+		<item href="text/titlepage.xhtml" id="titlepage.xhtml" media-type="application/xhtml+xml"/>
+	</manifest>
+	<spine toc="ncx">
+		<itemref idref="titlepage.xhtml"/>
+		<itemref idref="imprint.xhtml"/>
+		<itemref idref="epigraph.xhtml"/>
+		<itemref idref="halftitle.xhtml"/>
+		<itemref idref="chapter-1.xhtml"/>
+		<itemref idref="chapter-2.xhtml"/>
+		<itemref idref="chapter-3.xhtml"/>
+		<itemref idref="chapter-4.xhtml"/>
+		<itemref idref="chapter-5.xhtml"/>
+		<itemref idref="chapter-6.xhtml"/>
+		<itemref idref="chapter-7.xhtml"/>
+		<itemref idref="chapter-8.xhtml"/>
+		<itemref idref="chapter-9.xhtml"/>
+		<itemref idref="chapter-10.xhtml"/>
+		<itemref idref="chapter-11.xhtml"/>
+		<itemref idref="chapter-12.xhtml"/>
+		<itemref idref="colophon.xhtml"/>
+		<itemref idref="uncopyright.xhtml"/>
+	</spine>
+	<guide>
+		<reference href="text/titlepage.xhtml" title="Title Page" type="title-page text"/>
+		<reference href="text/imprint.xhtml" title="Imprint" type="imprint"/>
+		<reference href="text/epigraph.xhtml" title="All in the Golden Afternoon" type="z3998:fiction epigraph"/>
+		<reference href="text/chapter-1.xhtml" title="Alice’s Adventures in Wonderland" type="bodymatter"/>
+		<reference href="text/colophon.xhtml" title="Colophon" type="colophon"/>
+		<reference href="text/uncopyright.xhtml" title="Uncopyright" type="copyright page"/>
+	</guide>
+</package>
