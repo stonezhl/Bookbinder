@@ -29,6 +29,7 @@
 		25728ECD2291F71100DAC525 /* EPUBBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728ECC2291F71100DAC525 /* EPUBBook.swift */; };
 		25728ECF2291F72D00DAC525 /* EPUBs in Resources */ = {isa = PBXBuildFile; fileRef = 25728ECE2291F72D00DAC525 /* EPUBs */; };
 		25728ED12291F74800DAC525 /* EPUBBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728ED02291F74800DAC525 /* EPUBBookTests.swift */; };
+		25728ED32291F88300DAC525 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25728ED22291F88300DAC525 /* ZIPFoundation.framework */; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,6 +80,7 @@
 		25728ECC2291F71100DAC525 /* EPUBBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPUBBook.swift; sourceTree = "<group>"; };
 		25728ECE2291F72D00DAC525 /* EPUBs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EPUBs; sourceTree = "<group>"; };
 		25728ED02291F74800DAC525 /* EPUBBookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPUBBookTests.swift; sourceTree = "<group>"; };
+		25728ED22291F88300DAC525 /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZIPFoundation.framework; path = Carthage/Build/iOS/ZIPFoundation.framework; sourceTree = "<group>"; };
 		25FAE3AB22638133003F8214 /* Bookbinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bookbinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25FAE3AE22638133003F8214 /* Bookbinder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bookbinder.h; sourceTree = "<group>"; };
 		25FAE3AF22638133003F8214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25728ED32291F88300DAC525 /* ZIPFoundation.framework in Frameworks */,
 				25728EA22291BA0800DAC525 /* Kanna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +115,7 @@
 		25728EA02291B9FA00DAC525 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25728ED22291F88300DAC525 /* ZIPFoundation.framework */,
 				25728EA52291BAB500DAC525 /* Nimble.framework */,
 				25728EA42291BAB500DAC525 /* Quick.framework */,
 				25728EA12291BA0800DAC525 /* Kanna.framework */,
@@ -310,11 +314,13 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ZIPFoundation.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kanna.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ZIPFoundation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
