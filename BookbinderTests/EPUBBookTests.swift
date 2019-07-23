@@ -53,5 +53,26 @@ class EPUBBookTests: QuickSpec {
                 expect(ebook?.pages).to(equal(expectedPagePaths.map { ebook?.resourceBaseURL.appendingPathComponent($0) }))
             }
         }
+
+        describe("CustomBook") {
+            it("works") {
+                let epubPath = "EPUBs/Alice's_Adventures_in_Wonderland"
+                guard let url = Bundle(for: type(of: self)).url(forResource: epubPath, withExtension: nil) else {
+                    fail("Invalid epub path for test")
+                    return
+                }
+                let ebook = CustomBook(identifier: "Alice's_Adventures_in_Wonderland", contentsOf: url)
+                let creators = ebook?.firstAuthors
+                expect(creators?.count).to(equal(1))
+                expect(creators?[0]).to(equal("Lewis Carroll"))
+                let contributors = ebook?.secondAuthors
+                expect(contributors?.count).to(equal(5))
+                expect(contributors?[0]).to(equal("The League of Moveable Type"))
+                expect(contributors?[1]).to(equal("Ivan Ivanovich Shishkin"))
+                expect(contributors?[2]).to(equal("Arthur DiBianca"))
+                expect(contributors?[3]).to(equal("David Widger"))
+                expect(contributors?[4]).to(equal("Alex Cabal"))
+            }
+        }
     }
 }

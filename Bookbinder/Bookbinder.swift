@@ -17,6 +17,10 @@ public class Bookbinder {
     }
 
     public func bindBook(at sourceURL: URL, identifier: String? = nil) -> EPUBBook? {
+        return bindBook(at: sourceURL, to: EPUBBook.self, identifier: identifier)
+    }
+
+    public func bindBook<T>(at sourceURL: URL, to type: T.Type, identifier: String? = nil) -> T? where T: EPUBBook {
         let identifier = identifier ?? sourceURL.deletingPathExtension().lastPathComponent
         let baseURL = configuration.rootURL.appendingPathComponent(identifier)
         let fileManager = FileManager()
@@ -31,6 +35,6 @@ public class Bookbinder {
             }
         }
         // parse ePub file
-        return EPUBBook(identifier: identifier, contentsOf: baseURL)
+        return T(identifier: identifier, contentsOf: baseURL)
     }
 }
