@@ -3,7 +3,7 @@ A Swift ePub parser framework for iOS.
 
 ## Requirements
 * Swift 5.0+
-* iOS 12.2+
+* iOS 10.0+
 * ARC
 
 ## Usage
@@ -33,6 +33,24 @@ A Swift ePub parser framework for iOS.
    let pages = ebook.pages
    // others
    let mainAuthor = ebook.opf?.package?.metadata?.creators.first
+   ...
+   ```
+1. Subclass EPUBBook
+   ```
+   class CustomBook: EPUBBook {
+      lazy var firstAuthors: [String]? = {
+         return opf.package?.metadata?.creators
+      }()
+      
+      lazy var secondAuthors: [String]? = {
+        return opf.package?.metadata?.contributors
+      }()
+      
+      ...
+   }
+   
+   let bookbinder = Bookbinder()
+   let ebook = bookbinder.bindBook(at: url, to: CustomBook.self)
    ```
 1. Playground in `BookbinderTests`
    ```

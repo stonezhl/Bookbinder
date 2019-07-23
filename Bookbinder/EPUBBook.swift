@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class EPUBBook {
+open class EPUBBook {
     public let identifier: String
     public let baseURL: URL
     public let resourceBaseURL: URL
@@ -76,7 +76,7 @@ public class EPUBBook {
         }
     }()
 
-    public init?(identifier: String? = nil, contentsOf baseURL: URL) {
+    public required init?(identifier: String? = nil, contentsOf baseURL: URL) {
         self.identifier = identifier ?? UUID().uuidString
         self.baseURL = baseURL
         // parse container file
