@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class EPUBBook {
+open class EPUBBook {
     public let identifier: String
     public let baseURL: URL
     public let resourceBaseURL: URL
