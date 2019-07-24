@@ -33,6 +33,8 @@
 		25728ED92291F95600DAC525 /* ZIPs in Resources */ = {isa = PBXBuildFile; fileRef = 25728ED82291F95600DAC525 /* ZIPs */; };
 		25728EDC2291FF5100DAC525 /* BookbinderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EDA2291FF5100DAC525 /* BookbinderConfiguration.swift */; };
 		25728EDD2291FF5100DAC525 /* Bookbinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EDB2291FF5100DAC525 /* Bookbinder.swift */; };
+		25CA413F22E8A5D500466660 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25728EA12291BA0800DAC525 /* Kanna.framework */; };
+		25CA414022E8A5EF00466660 /* Kanna.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25728EA12291BA0800DAC525 /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAE3AB22638133003F8214 /* Bookbinder.framework */; };
 		25FAE3BA22638133003F8214 /* BookbinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FAE3B922638133003F8214 /* BookbinderTests.swift */; };
 		25FAE3BC22638133003F8214 /* Bookbinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 25FAE3AE22638133003F8214 /* Bookbinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,6 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				25CA414022E8A5EF00466660 /* Kanna.framework in CopyFiles */,
 				25728EA92291BAC500DAC525 /* Nimble.framework in CopyFiles */,
 				25728EAA2291BAC500DAC525 /* Quick.framework in CopyFiles */,
 			);
@@ -109,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CA413F22E8A5D500466660 /* Kanna.framework in Frameworks */,
 				25728EA62291BAB500DAC525 /* Quick.framework in Frameworks */,
 				25728EA72291BAB500DAC525 /* Nimble.framework in Frameworks */,
 				25FAE3B522638133003F8214 /* Bookbinder.framework in Frameworks */,

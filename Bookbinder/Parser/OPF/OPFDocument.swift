@@ -11,7 +11,7 @@ import Kanna
 public struct OPFDocument {
     public let package: OPFPackage?
 
-    private let document: XMLDocument
+    public let document: XMLDocument
 
     init?(url: URL) {
         do {

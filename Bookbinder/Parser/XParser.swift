@@ -8,13 +8,13 @@
 
 import Foundation
 
-enum XPath {
+public enum XPath {
     case opf
     case dc
     case ncx
     case container
 
-    var namespace: [String: String] {
+    public var namespace: [String: String] {
         switch self {
         case .opf:
             return ["opf": "http://www.idpf.org/2007/opf"]
