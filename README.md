@@ -6,16 +6,11 @@ A Swift ePub parser framework for iOS.
 * iOS 10.0+
 * ARC
 
-## Usage
+## Basic Usage
 1. Create bookbinder instance with default configuration
    ```
    // default configuration uses `NSTemporaryDirectory` as root directory to unzip ePub file
    let bookbinder = Bookbinder()
-   ```
-1. Create bookbinder instance with custom configuration
-   ```
-   let configuration = BookbinderConfiguration(rootURL: customRootURL)
-   let bookbinder = Bookbinder(configuration: configuration)
    ```
 1. Parse ePub file by one line
    ```
@@ -35,23 +30,6 @@ A Swift ePub parser framework for iOS.
    let mainAuthor = ebook.opf?.package?.metadata?.creators.first
    ...
    ```
-1. Subclass EPUBBook
-   ```
-   class CustomBook: EPUBBook {
-      lazy var firstAuthors: [String]? = {
-         return opf.package?.metadata?.creators
-      }()
-      
-      lazy var secondAuthors: [String]? = {
-        return opf.package?.metadata?.contributors
-      }()
-      
-      ...
-   }
-   
-   let bookbinder = Bookbinder()
-   let ebook = bookbinder.bindBook(at: url, to: CustomBook.self)
-   ```
 1. Playground in `BookbinderTests`
    ```
    // study `Bookbinder` from unit test
@@ -65,6 +43,60 @@ A Swift ePub parser framework for iOS.
    expect(ebook?.releaseID).to(equal("\(ebook?.uniqueID ?? "")@2017-03-09T17:21:15Z"))
    expect(ebook?.publicationDate).to(equal(ISO8601DateFormatter().date(from: "2015-05-12T00:01:00Z")))
    ...
+   ```
+
+## Advanced Usage
+1. Create bookbinder instance with custom configuration
+   ```
+   let configuration = BookbinderConfiguration(rootURL: customRootURL)
+   let bookbinder = Bookbinder(configuration: configuration)
+   ```
+1. Subclass EPUBBook
+   ```
+   class CustomBook: EPUBBook {
+       lazy var firstAuthors: [String]? = {
+           return opf.package?.metadata?.creators
+       }()
+       
+       lazy var secondAuthors: [String]? = {
+           return opf.package?.metadata?.contributors
+       }()
+       
+       ...
+   }
+   
+   let bookbinder = Bookbinder()
+   let ebook = bookbinder.bindBook(at: url, to: CustomBook.self)
+   ```
+1. Custom OPF XPath
+   ```
+   import Kanna
+
+   struct GuideRef {
+       let title: String
+       let href: String
+       let type: String
+       
+       init(_ reference: XMLElement) {
+           title = reference["title"] ?? ""
+           href = reference["href"] ?? ""
+           type = reference["type"] ?? ""
+       }
+   }
+   
+   class CustomBook: EPUBBook {
+       // http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.6
+       lazy var guideRefs: [GuideRef] = {
+           var refs = [GuideRef]()
+           let references = opf.document.xpath("/opf:package/opf:guide/opf:reference", namespaces: XPath.opf.namespace)
+           for reference in references {
+               refs.append(GuideRef(reference))
+           }
+           return refs
+       }()
+       
+       ...
+   }
    ```
 
 ## Installation
