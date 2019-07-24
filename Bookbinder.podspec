@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "Bookbinder"
-  spec.version = "1.0.1"
+  spec.version = "1.0.2"
   spec.summary = "A Swift ePub parser framework for iOS."
   spec.homepage = "https://github.com/stonezhl/Bookbinder"
   spec.license = { type: "MIT", file: "LICENSE" }
