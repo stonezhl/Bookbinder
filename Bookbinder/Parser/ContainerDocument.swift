@@ -18,6 +18,7 @@ struct ContainerDocument {
             document = try Kanna.XML(url: url, encoding: .utf8)
             opfPath = document.at_xpath("//container:rootfile[@full-path]/@full-path", namespaces: XPath.container.namespace)?.text
         } catch {
+            print("Parsing the XML file at \(url) failed with error: \(error)")
             return nil
         }
     }

@@ -8,7 +8,7 @@
 
 import Kanna
 
-// https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/
+// https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-package-def
 public struct OPFPackage {
     public let uniqueIdentifierID: String?
     public let metadata: OPFMetadata?

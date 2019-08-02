@@ -8,6 +8,7 @@
 
 import Kanna
 
+// https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/
 public struct OPFDocument {
     public let package: OPFPackage?
 
@@ -18,6 +19,7 @@ public struct OPFDocument {
             document = try Kanna.XML(url: url, encoding: .utf8)
             package = OPFPackage(document: document)
         } catch {
+            print("Parsing the XML file at \(url) failed with error: \(error)")
             return nil
         }
     }
