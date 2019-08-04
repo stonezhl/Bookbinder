@@ -8,10 +8,10 @@
 
 import Kanna
 
-struct ContainerDocument {
-    let opfPath: String?
+public struct ContainerDocument {
+    public let opfPath: String?
 
-    private let document: XMLDocument
+    public let document: XMLDocument
 
     init?(url: URL) {
         do {

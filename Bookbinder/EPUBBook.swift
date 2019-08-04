@@ -12,6 +12,7 @@ open class EPUBBook {
     public let identifier: String
     public let baseURL: URL
     public let resourceBaseURL: URL
+    public let container: ContainerDocument
     public let opf: OPFDocument
 
     // accessor
@@ -81,8 +82,9 @@ open class EPUBBook {
         self.baseURL = baseURL
         // parse container file
         let containerURL = baseURL.appendingPathComponent("META-INF/container.xml")
-        let container = ContainerDocument(url: containerURL)
-        guard let opfPath = container?.opfPath else { return nil }
+        guard let container = ContainerDocument(url: containerURL) else { return nil }
+        self.container = container
+        guard let opfPath = container.opfPath else { return nil }
         // parse opf fitle
         let opfURL = baseURL.appendingPathComponent(opfPath)
         resourceBaseURL = opfURL.deletingLastPathComponent()
