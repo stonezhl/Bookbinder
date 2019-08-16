@@ -6,7 +6,6 @@
 //  Copyright © 2019 Stone Zhang. All rights reserved.
 //
 
-import Foundation
 import ZIPFoundation
 
 public class Bookbinder {
@@ -30,7 +29,7 @@ public class Bookbinder {
                 try fileManager.createDirectory(at: baseURL, withIntermediateDirectories: true, attributes: nil)
                 try fileManager.unzipItem(at: sourceURL, to: baseURL)
             } catch {
-                print("Extraction of ePub file failed with error: \(error)")
+                print("Extraction of the ePub file failed with error: \(error)")
                 return nil
             }
         }

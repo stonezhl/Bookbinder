@@ -21,11 +21,9 @@ class OPFParserTests: QuickSpec {
                 }
                 let opfDocument = OPFDocument(url: url)
                 expect(opfDocument).notTo(beNil())
-                let package = opfDocument?.package
-                expect(package).notTo(beNil())
-                expect(package?.uniqueIdentifierID).to(equal("uid"))
+                expect(opfDocument?.uniqueIdentifierID).to(equal("uid"))
                 // metadata
-                let metadata = package?.metadata
+                let metadata = opfDocument?.metadata
                 expect(metadata).notTo(beNil())
                 let identifiers = metadata?.identifiers
                 expect(identifiers?.count).to(equal(1))
@@ -64,7 +62,7 @@ class OPFParserTests: QuickSpec {
                 let coverImageID = metadata?.coverImageID
                 expect(coverImageID).to(equal("cover.jpg"))
                 // manifest
-                let manifest = package?.manifest
+                let manifest = opfDocument?.manifest
                 expect(manifest).notTo(beNil())
                 let items = manifest?.items
                 expect(items?.count).to(equal(25))
@@ -122,7 +120,7 @@ class OPFParserTests: QuickSpec {
                                 expect(items?[file]?.properties).to(beNil())
                 }
                 // spine
-                let spine = package?.spine
+                let spine = opfDocument?.spine
                 expect(spine).notTo(beNil())
                 expect(spine?.toc).to(equal("ncx"))
                 let expectedIdrefs = ["titlepage.xhtml",

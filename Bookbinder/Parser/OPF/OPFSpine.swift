@@ -33,7 +33,9 @@ public struct SpineItemref {
     // properties [optional]
 
     public var isPrimary: Bool {
-        guard let linear = self.linear else { return true }
+        guard let linear = self.linear else {
+            return true
+        }
         return linear == "yes"
     }
 

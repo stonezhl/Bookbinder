@@ -24,6 +24,7 @@ class EPUBBookTests: QuickSpec {
                 expect(ebook?.identifier).to(equal("Alice's_Adventures_in_Wonderland"))
                 expect(ebook?.baseURL).to(equal(url))
                 expect(ebook?.resourceBaseURL).to(equal(url.appendingPathComponent("epub")))
+                expect(ebook?.container).notTo(beNil())
                 expect(ebook?.opf).notTo(beNil())
                 expect(ebook?.uniqueID).to(equal("url:https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland"))
                 expect(ebook?.releaseID).to(equal("\(ebook?.uniqueID ?? "")@2017-03-09T17:21:15Z"))
