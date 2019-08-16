@@ -1,6 +1,8 @@
 # Bookbinder
 A Swift ePub parser framework for iOS.
 
+You can read [How to Parse an ePub File for iOS](https://medium.com/@stonezhl/how-to-parse-an-epub-file-for-ios-df30213b9a73) to learn more.
+
 ## Requirements
 * Swift 5.0+
 * iOS 10.0+
@@ -27,7 +29,7 @@ A Swift ePub parser framework for iOS.
    // primary spine items
    let pages = ebook.pages
    // others
-   let mainAuthor = ebook.opf?.package?.metadata?.creators.first
+   let mainAuthor = ebook.opf.metadata.creators.first
    ...
    ```
 1. Playground in `BookbinderTests`
@@ -38,6 +40,7 @@ A Swift ePub parser framework for iOS.
    expect(ebook?.identifier).to(equal("Alice's_Adventures_in_Wonderland"))
    expect(ebook?.baseURL).to(equal(url))
    expect(ebook?.resourceBaseURL).to(equal(url.appendingPathComponent("epub")))
+   expect(ebook?.container).notTo(beNil())
    expect(ebook?.opf).notTo(beNil())
    expect(ebook?.uniqueID).to(equal("url:https://standardebooks.org/ebooks/lewis-carroll/alices-adventures-in-wonderland"))
    expect(ebook?.releaseID).to(equal("\(ebook?.uniqueID ?? "")@2017-03-09T17:21:15Z"))
@@ -54,12 +57,12 @@ A Swift ePub parser framework for iOS.
 1. Subclass EPUBBook
    ```
    class CustomBook: EPUBBook {
-       lazy var firstAuthors: [String]? = {
-           return opf.package?.metadata?.creators
+       lazy var firstAuthors: [String] = {
+           return opf.metadata.creators
        }()
        
-       lazy var secondAuthors: [String]? = {
-           return opf.package?.metadata?.contributors
+       lazy var secondAuthors: [String] = {
+           return opf.metadata.contributors
        }()
        
        ...
@@ -88,7 +91,8 @@ A Swift ePub parser framework for iOS.
        // http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.6
        lazy var guideRefs: [GuideRef] = {
            var refs = [GuideRef]()
-           let references = opf.document.xpath("/opf:package/opf:guide/opf:reference", namespaces: XPath.opf.namespace)
+           let xpath = "/opf:package/opf:guide/opf:reference"
+           let references = opf.document.xpath(xpath, namespaces: XPath.opf.namespace)
            for reference in references {
                refs.append(GuideRef(reference))
            }
