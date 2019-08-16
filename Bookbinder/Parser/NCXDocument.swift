@@ -13,18 +13,17 @@ public struct NCXDocument {
     public let title: String?
     public private(set) var points = [NavPoint]()
 
-    private let document: XMLDocument
+    public let document: XMLDocument
 
     init?(url: URL) {
         do {
             document = try Kanna.XML(url: url, encoding: .utf8)
-            let ncx = document.at_xpath("/ncx:ncx", namespaces: XPath.ncx.namespace)
-            title = ncx?.at_xpath("ncx:docTitle/ncx:text", namespaces: XPath.ncx.namespace)?.text
-            if let navPoints = ncx?.xpath("ncx:navMap/ncx:navPoint", namespaces: XPath.ncx.namespace) {
-                for navPoint in navPoints {
-                    guard let point = NavPoint(navPoint) else { continue }
-                    points.append(point)
-                }
+            guard let ncx = document.at_xpath("/ncx:ncx", namespaces: XPath.ncx.namespace) else { return nil }
+            title = ncx.at_xpath("ncx:docTitle/ncx:text", namespaces: XPath.ncx.namespace)?.text
+            let navPoints = ncx.xpath("ncx:navMap/ncx:navPoint", namespaces: XPath.ncx.namespace)
+            for navPoint in navPoints {
+                guard let point = NavPoint(navPoint) else { continue }
+                points.append(point)
             }
         } catch {
             return nil
@@ -39,12 +38,12 @@ public struct NavPoint {
     public private(set) var subPoints = [NavPoint]()
 
     init?(_ navPoint: XMLElement) {
-        guard let playOrder = navPoint["playOrder"], let PointOrder = Int(playOrder) else { return nil }
-        guard let PointLabel = navPoint.at_xpath("ncx:navLabel/ncx:text", namespaces: XPath.ncx.namespace)?.text else { return nil }
-        guard let PointSrc = navPoint.at_xpath("ncx:content/@src", namespaces: XPath.ncx.namespace)?.text else { return nil }
-        order = PointOrder
-        label = PointLabel
-        src = PointSrc
+        guard let playOrder = navPoint["playOrder"], let pointOrder = Int(playOrder) else { return nil }
+        guard let pointLabel = navPoint.at_xpath("ncx:navLabel/ncx:text", namespaces: XPath.ncx.namespace)?.text else { return nil }
+        guard let pointSrc = navPoint.at_xpath("ncx:content/@src", namespaces: XPath.ncx.namespace)?.text else { return nil }
+        order = pointOrder
+        label = pointLabel
+        src = pointSrc
         let subNavPoints = navPoint.xpath("ncx:navPoint", namespaces: XPath.ncx.namespace)
         for subNavPoint in subNavPoints {
             guard let point = NavPoint(subNavPoint) else { continue }

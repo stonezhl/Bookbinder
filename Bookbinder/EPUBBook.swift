@@ -19,7 +19,8 @@ open class EPUBBook {
 
     // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-metadata-elem-identifiers-uid
     public lazy var uniqueID: String? = {
-        guard let identifiers = opf.package?.metadata?.identifiers, let uniqueIdentifierID = opf.package?.uniqueIdentifierID else { return nil }
+        let uniqueIdentifierID = opf.uniqueIdentifierID
+        let identifiers = opf.metadata.identifiers
         for identifier in identifiers where identifier.id == uniqueIdentifierID {
             return identifier.text
         }
@@ -29,50 +30,50 @@ open class EPUBBook {
     // https://www.w3.org/Submission/2017/SUBM-epub-packages-20170125/#sec-metadata-elem-identifiers-pid
     public lazy var releaseID: String? = {
         guard let id = uniqueID else { return nil }
-        guard let date = opf.package?.metadata?.modifiedDate else {
+        guard let date = opf.metadata.modifiedDate else {
             return id
         }
         return id + "@" + date
     }()
 
     public lazy var publicationDate: Date? = {
-        guard let date = opf.package?.metadata?.date else { return nil }
+        guard let date = opf.metadata.date else { return nil }
         return ISO8601DateFormatter().date(from: date)
     }()
 
     // http://idpf.org/forum/topic-715
     public lazy var coverImageURLs: [URL] = {
         var urls = [URL]()
-        guard let manifest = opf.package?.manifest else { return urls }
-        for item in manifest.items.values where item.properties == "cover-image" {
+        for item in opf.manifest.items.values where item.properties == "cover-image" {
             let url = resourceBaseURL.appendingPathComponent(item.href)
             urls.append(url)
         }
-        guard let imageID = opf.package?.metadata?.coverImageID, let path = manifest.items[imageID]?.href else { return urls }
+        guard let imageID = opf.metadata.coverImageID, let path = opf.manifest.items[imageID]?.href else {
+            return urls
+        }
         let url = resourceBaseURL.appendingPathComponent(path)
         urls.append(url)
         return urls
     }()
 
     public lazy var tocURL: URL? = {
-        guard let manifest = opf.package?.manifest else { return nil }
-        for item in manifest.items.values where item.properties == "nav" {
+        for item in opf.manifest.items.values where item.properties == "nav" {
             return resourceBaseURL.appendingPathComponent(item.href)
         }
         return nil
     }()
 
     public lazy var ncx: NCXDocument? = {
-        guard let ncxID = opf.package?.spine?.toc, let path = opf.package?.manifest?.items[ncxID]?.href else { return nil }
+        guard let ncxID = opf.spine.toc, let path = opf.manifest.items[ncxID]?.href else { return nil }
         let url = resourceBaseURL.appendingPathComponent(path)
         return NCXDocument(url: url)
     }()
 
     public lazy var pages: [URL]? = {
-        return opf.package?.spine?.itemrefs
+        return opf.spine.itemrefs
             .filter { $0.isPrimary }
             .compactMap {
-                guard let path = opf.package?.manifest?.items[$0.idref]?.href else { return nil }
+                guard let path = opf.manifest.items[$0.idref]?.href else { return nil }
                 return resourceBaseURL.appendingPathComponent(path)
         }
     }()
@@ -84,9 +85,8 @@ open class EPUBBook {
         let containerURL = baseURL.appendingPathComponent("META-INF/container.xml")
         guard let container = ContainerDocument(url: containerURL) else { return nil }
         self.container = container
-        guard let opfPath = container.opfPath else { return nil }
         // parse opf fitle
-        let opfURL = baseURL.appendingPathComponent(opfPath)
+        let opfURL = baseURL.appendingPathComponent(container.opfPath)
         resourceBaseURL = opfURL.deletingLastPathComponent()
         guard let opf = OPFDocument(url: opfURL) else { return nil }
         self.opf = opf

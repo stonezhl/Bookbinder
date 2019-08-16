@@ -24,18 +24,19 @@ struct GuideRef {
 }
 
 class CustomBook: EPUBBook {
-    lazy var firstAuthors: [String]? = {
-        return opf.package?.metadata?.creators
+    lazy var firstAuthors: [String] = {
+        return opf.metadata.creators
     }()
 
-    lazy var secondAuthors: [String]? = {
-        return opf.package?.metadata?.contributors
+    lazy var secondAuthors: [String] = {
+        return opf.metadata.contributors
     }()
 
     // http://www.idpf.org/epub/20/spec/OPF_2.0.1_draft.htm#Section2.6
     lazy var guideRefs: [GuideRef] = {
         var refs = [GuideRef]()
-        let references = opf.document.xpath("/opf:package/opf:guide/opf:reference", namespaces: XPath.opf.namespace)
+        let xpath = "/opf:package/opf:guide/opf:reference"
+        let references = opf.document.xpath(xpath, namespaces: XPath.opf.namespace)
         for reference in references {
             refs.append(GuideRef(reference))
         }
@@ -73,8 +74,8 @@ class BookbinderTests: QuickSpec {
                 let bookbinder = Bookbinder()
                 let ebook = bookbinder.bindBook(at: url, to: CustomBook.self)
                 expect(ebook).notTo(beNil())
-                expect(ebook?.firstAuthors?.count).to(equal(1))
-                expect(ebook?.secondAuthors?.count).to(equal(5))
+                expect(ebook?.firstAuthors.count).to(equal(1))
+                expect(ebook?.secondAuthors.count).to(equal(5))
                 expect(ebook?.guideRefs.count).to(equal(6))
             }
         }

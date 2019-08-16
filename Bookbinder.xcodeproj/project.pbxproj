@@ -14,7 +14,6 @@
 		25728EAA2291BAC500DAC525 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 25728EA42291BAB500DAC525 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		25728EB42291F3F000DAC525 /* XParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EAE2291F3F000DAC525 /* XParser.swift */; };
 		25728EB52291F3F000DAC525 /* OPFDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EAF2291F3F000DAC525 /* OPFDocument.swift */; };
-		25728EB62291F3F000DAC525 /* OPFPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EB02291F3F000DAC525 /* OPFPackage.swift */; };
 		25728EB72291F3F000DAC525 /* OPFManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EB12291F3F000DAC525 /* OPFManifest.swift */; };
 		25728EB82291F3F000DAC525 /* OPFMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EB22291F3F000DAC525 /* OPFMetadata.swift */; };
 		25728EB92291F3F000DAC525 /* OPFSpine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25728EB32291F3F000DAC525 /* OPFSpine.swift */; };
@@ -71,7 +70,6 @@
 		25728EA52291BAB500DAC525 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		25728EAE2291F3F000DAC525 /* XParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XParser.swift; sourceTree = "<group>"; };
 		25728EAF2291F3F000DAC525 /* OPFDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFDocument.swift; sourceTree = "<group>"; };
-		25728EB02291F3F000DAC525 /* OPFPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFPackage.swift; sourceTree = "<group>"; };
 		25728EB12291F3F000DAC525 /* OPFManifest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFManifest.swift; sourceTree = "<group>"; };
 		25728EB22291F3F000DAC525 /* OPFMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFMetadata.swift; sourceTree = "<group>"; };
 		25728EB32291F3F000DAC525 /* OPFSpine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPFSpine.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				25728EAF2291F3F000DAC525 /* OPFDocument.swift */,
-				25728EB02291F3F000DAC525 /* OPFPackage.swift */,
 				25728EB22291F3F000DAC525 /* OPFMetadata.swift */,
 				25728EB12291F3F000DAC525 /* OPFManifest.swift */,
 				25728EB32291F3F000DAC525 /* OPFSpine.swift */,
@@ -372,7 +369,6 @@
 				25728ECD2291F71100DAC525 /* EPUBBook.swift in Sources */,
 				25728EB42291F3F000DAC525 /* XParser.swift in Sources */,
 				25728EC72291F65F00DAC525 /* ContainerDocument.swift in Sources */,
-				25728EB62291F3F000DAC525 /* OPFPackage.swift in Sources */,
 				25728EB92291F3F000DAC525 /* OPFSpine.swift in Sources */,
 				25728EC12291F57200DAC525 /* NCXDocument.swift in Sources */,
 			);
